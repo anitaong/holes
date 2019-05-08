@@ -1,0 +1,108 @@
+//代码如下，是跟着百度前端课做的，但是点击HTML的图片没有反应，也没有弹出消息，js仿佛没有反应
+
+//main.js
+let myImage=document.querySelector('img');
+myImage.onclick=function(){
+
+  let mySrc=myImage.getAttribute('src');//这里有个双等号一直没检测出来。
+    if(mySrc==='iamges/002.png'){
+	myImage.setAttribute('src','images/001.png');
+
+     }else{
+
+      myImage.setAttribute('src','images/002.png');
+
+
+//index.html
+<!DOCTYPE HTML>
+<html>
+	<head>
+    
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+     <meta charset="utf-8">
+
+    <title> MY Everlasting Garden</title>
+     <srcipt  src="scripts/main.js" defer> </srcipt>
+	</head>
+	<h1>West Hill Garden  岭西花园</h1>
+
+
+     <body>
+		 <a  href="https://www.davidaustinroses.com/" >大卫奥斯汀月季</a>
+         <p>大卫奥斯汀，英国月季培育人</p>
+
+     	<ol>
+     		<li>粉色龙沙宝石Eden Rose</li>
+     		<li>红色龙沙宝石 Red Eden Rose</li>
+     		<li>夏洛特夫人</li>
+     	</ol>
+     	<img  src="images/001.png"  width="80" height="80" alt="图标一"></images>
+     	<img src="images/002.png"  width="80" height="80" alt="图标二"></images>
+
+
+		<img src="ER01.jpg"  width="800" height="800" alt="Eden Rose"></images> 
+       	<img src="AD01.jpg"  width="800" height="800" alt="亚伯达比 藤本月季"></images>
+        <img src="ER05.JPG"  width="800" height="800" alt="Eden Rose"></images>
+
+
+        <botton>切换用户</botton>
+
+     </body>
+
+</html>
+
+//style.css
+html{
+
+background-color：#FFE1FF;
+font-size:10px;/* px 表示 “像素（pixels）”: 基础字号为 10 像素 */
+font-family:'Open Sans',sans-serif;/* Google fonts 输出的 CSS */
+
+}
+h1{
+	margin:0;
+	padding:10px 0;/*标题的上下内边距设置为 20 像素*/
+    color:#DEB887;
+    text-shadow:3px 3px 3px brown;
+    /*
+    第一个值设置水平偏移值 —— 即阴影右移的像素数（负值左移）。
+    第二个值设置垂直偏移值 —— 即阴影下移的像素数（负值上移）。
+    第三个值设置阴影的模糊半径 —— 值越大产生的阴影越模糊。
+    第四个值设置阴影的基色。
+*/
+
+font-size:60px;
+text-align:center;/*文本对齐方式*/
+}
+
+body{
+
+  width:800px;/*强制页面永远保持 800 像素宽*/
+  padding:0 20px 20px 20px;/*我们给内边距设置了四个值来让内容四周产生一点空间。
+                            这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为20像素。
+                            值以上、右、下、左的顺序排列。*/
+  margin:0 auto;
+  background-color:#FFE1FF;
+  border:1px solid black;/*直接为 body 设置 1 像素的黑色实线边框。*/
+}
+
+p,li{
+
+font-size:16px;
+line-height:2;/*行高*/
+letter-spacing:1px;/*字体间距*/
+}
+
+img{
+  display:block;
+  margin:0 auto;
+
+
+}
+
+
+
+
+
